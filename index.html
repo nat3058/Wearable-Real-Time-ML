@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase</title>
+    <style>
+        /* Add an animated gradient background */
+        body {
+            background-image: linear-gradient(-45deg, #3a86ff, #ff006e, #f1c40f, #2ecc71);
+            background-size: 400% 400%;
+            animation: gradient 30s ease infinite;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Create a container for the PDF and video */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+.heading {
+    text-align: center;
+    margin-bottom: 0px;
+font-size: 40px;
+}
+
+.heading span {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the subheading */
+.subheading {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Style the tags container */
+.tags-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Style the tags */
+.tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    margin: 0 10px;
+}
+
+        /* Style the content container */
+        .content-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        /* Style the PDF iframe */
+        .pdf-container {
+            width: 45%;
+            height: 80vh;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style the video iframe */
+        .video-container {
+            width: 45%;
+            height: 80vh;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Define the animation */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Project Showcase: <span>Static Hand Gesture Recognition</span></h1>
+        <p class="subheading">A wrist wearable using real-time machine learning to identify hand gestures (~75%+ mean accuracy in user study)</p>
+        <div class="tags-container">
+            <span class="tag">Research</span>
+            <span class="tag">Real Time Machine Learning</span>
+            <span class="tag">IoT</span>
+        </div>
+        <div class="content-container">
+            <!-- Embed the PDF -->
+            <div class="pdf-container">
+                <iframe src="./REPORT-FINAL.pdf" frameborder="0" width="100%" height="100%"></iframe>
+            </div>
+            
+            <!-- Embed the YouTube video -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/watch?v=bpoDfiDHFLA" frameborder="0" allowfullscreen width="100%" height="100%"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
