@@ -7,6 +7,7 @@
     <style>
         /* Add an animated gradient background */
        /* Add an animated gradient background */
+/* Add an animated gradient background */
 body {
     background-image: linear-gradient(-45deg, #3a86ff, #ff006e, #f1c40f, #2ecc71);
     background-size: 400% 400%;
@@ -81,16 +82,17 @@ body {
 }
 
 /* Style the PDF iframe */
-.pdf-container {
+.pdf-container, .poster-pdf-container {
     width: 90%;
     height: 60vh;
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
+    overflow: auto;
 }
 
 @media (min-width: 768px) {
-    .pdf-container {
+    .pdf-container, .poster-pdf-container {
         height: 80vh;
     }
 }
@@ -111,21 +113,6 @@ body {
     }
 }
 
-/* Style the poster PDF iframe */
-.poster-pdf-container {
-    width: 90%;
-    height: 60vh;
-    border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-    .poster-pdf-container {
-        height: 80vh;
-    }
-}
-
 /* Define the animation */
 @keyframes gradient {
     0% {
@@ -137,6 +124,17 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+.pdf-container, .poster-pdf-container {
+    overflow: hidden;
+}
+
+.pdf-container iframe, .poster-pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: auto;
+    display: block;
 }
     </style>
 </head>
@@ -157,16 +155,17 @@ body {
             
             <!-- Embed the project poster PDF -->
             <div class="poster-pdf-container">
-                <iframe src="./gesture-recognition-poster.pdf" frameborder="0" width="100%" height="100%"></iframe>
+                <iframe src="./gesture-recognition-poster.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
             </div>
             <!-- Embed the PDF -->
             <div class="pdf-container">
-                <iframe src="./REPORT-FINAL.pdf" frameborder="0" width="100%" height="100%"></iframe>
+                <iframe src="./REPORT-FINAL.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
             </div>
             
         </div>
     </div>
 </body>
+</html>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JB3EMBZGV"></script>
     <script>
