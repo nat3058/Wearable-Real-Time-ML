@@ -6,136 +6,128 @@
     <title>Project Showcase</title>
     <style>
         /* Add an animated gradient background */
-       /* Add an animated gradient background */
-/* Add an animated gradient background */
-body {
-    background-image: linear-gradient(-45deg, #3a86ff, #ff006e, #f1c40f, #2ecc71);
-    background-size: 400% 400%;
-    animation: gradient 30s ease infinite;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            background-image: linear-gradient(-45deg, #3a86ff, #ff006e, #f1c40f, #2ecc71);
+            background-size: 400% 400%;
+            animation: gradient 30s ease infinite;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Create a container for the PDF and video */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-}
+        /* Create a container for the PDF and video */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .heading {
+            text-align: center;
+            margin-bottom: 0px;
+            font-size: 40px;
+        }
 
-.heading {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 24px;
-}
+        .heading span {
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-@media (min-width: 768px) {
-    .heading {
-        font-size: 40px;
-        margin-bottom: 0px;
-    }
-}
+        /* Style the subheading */
+        .subheading {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+        }
 
-.heading span {
-    color: #fff;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+        /* Style the tags container */
+        .tags-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-/* Style the subheading */
-.subheading {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 16px;
-}
+        /* Style the tags */
+        .tag {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 10px;
+            color: #fff;
+            margin: 0 10px;
+        }
 
-@media (min-width: 768px) {
-    .subheading {
-        font-size: 18px;
-    }
-}
+        /* Style the content container */
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
 
-/* Style the tags container */
-.tags-container {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-/* Style the tags */
-.tag {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: #fff;
-    margin: 0 10px;
-}
-
-/* Style the content container */
-.content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+        /* Style the PDF iframe
+        .pdf-container {
+            width: 90%;
+            height: 80vh;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        } */
+        /* Style the PDF iframe */
+.pdf-container {
     width: 100%;
-}
-
-/* Style the PDF iframe */
-.pdf-container, .poster-pdf-container {
-    width: 90%;
-    height: 60vh;
+    height: 80vh;
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
-    overflow: auto;
 }
 
-@media (min-width: 768px) {
+/* Style the poster PDF iframe */
+.poster-pdf-container {
+    width: 100%;
+    height: 80vh;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+/* Responsive design for mobile devices */
+@media only screen and (max-width: 768px) {
     .pdf-container, .poster-pdf-container {
-        height: 80vh;
+        height: 100vh;
+        width: 100vw;
     }
 }
 
-/* Style the video iframe */
-.video-container {
-    width: 90%;
-    height: 60vh;
-    border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
-}
+        /* Style the video iframe */
+        .video-container {
+            width: 560px;
+            height: 315px;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
 
-@media (min-width: 768px) {
-    .video-container {
-        width: 560px;
-        height: 315px;
-    }
-}
+        /* Style the poster PDF iframe */
+        /* .poster-pdf-container {
+            width: 90%;
+            height: 80vh;
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        } */
 
-/* Define the animation */
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-.pdf-container, .poster-pdf-container {
-    overflow: hidden;
-}
-
-.pdf-container iframe, .poster-pdf-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    overflow: auto;
-    display: block;
-}
+        /* Define the animation */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -155,17 +147,16 @@ body {
             
             <!-- Embed the project poster PDF -->
             <div class="poster-pdf-container">
-                <iframe src="./gesture-recognition-poster.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+                <iframe src="./gesture-recognition-poster.pdf" frameborder="0" width="100%" height="100%"></iframe>
             </div>
             <!-- Embed the PDF -->
             <div class="pdf-container">
-                <iframe src="./REPORT-FINAL.pdf#toolbar=0&navpanes=0&scrollbar=0" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+                <iframe src="./REPORT-FINAL.pdf" frameborder="0" width="100%" height="100%"></iframe>
             </div>
             
         </div>
     </div>
 </body>
-</html>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JB3EMBZGV"></script>
     <script>
